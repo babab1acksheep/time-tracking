@@ -1,6 +1,6 @@
 'use strict';
 
-App.factory('UserService', ['$http', '$q', function($http, $q){
+App.factory('ResourceService', ['$http', '$q', function($http, $q){
 
 	return {
 		
@@ -18,7 +18,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 			},
 		    
 		    createUser: function(user,baseUrl){
-					return $http.post(baseUrl+'user/', user)
+					return $http.post(baseUrl+'user/add/', user)
 							.then(
 									function(response){
 										return response.data;
@@ -31,7 +31,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 		    },
 		    
 		    updateUser: function(user, id,baseUrl){
-					return $http.put(baseUrl+'user/'+id, user)
+					return $http.put(baseUrl+'user/update/'+id, user)
 							.then(
 									function(response){
 										return response.data;
@@ -44,7 +44,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 			},
 		    
 			deleteUser: function(id,baseUrl){
-					return $http.post(baseUrl+'user/'+id)
+					return $http.post(baseUrl+'user/remove/'+id)
 							.then(
 									function(response){
 										return response.data;

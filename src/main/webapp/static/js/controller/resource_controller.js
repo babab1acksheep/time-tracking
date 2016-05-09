@@ -1,10 +1,16 @@
 'use strict';
 
-App.controller('UserController', ['$scope', 'UserService','$location', function($scope, UserService, $location) {
+App.controller('ResourceController', ['$scope', 'ResourceService','$location', function($scope, ResourceService, $location) {
 	      var baseUrl = $location.absUrl();
           var self = this;
-          self.user={id:null,username:'',address:'',email:''};
-          self.users=[];
+          self.user={firstName:'',lastName:'',email:'',employeeId:'',designation:''};
+          self.user=[];
+          self.user.availableRoles= [
+                             {id: 'TL', name: 'Team Lead'},
+                             {id: 'SE', name: 'Software Engineer'},
+                             {id: 'SSE', name: 'Senior Software Engineer'},
+                             {id: 'QA', name:'Quality Assurance'}
+                           ];          
               
           self.fetchAllUsers = function(baseUrl){
               UserService.fetchAllUsers(baseUrl)
@@ -81,7 +87,7 @@ App.controller('UserController', ['$scope', 'UserService','$location', function(
 
           
           self.reset = function(){
-              self.user={id:null,username:'',address:'',email:''};
+        	  self.user={firstName:'',lastName:'',email:'',employeeId:'',designation:'',reportingTo:''};
               $scope.myForm.$setPristine(); //reset Form
           };
 

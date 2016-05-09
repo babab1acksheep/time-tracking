@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.websystique.springmvc")
+@ComponentScan(basePackages = "com.lister.projmng")
 public class HelloWorldConfiguration extends WebMvcConfigurerAdapter{
 	
 	@Override

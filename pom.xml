@@ -1,11 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.websystique.springmvc</groupId>
-	<artifactId>Spring4MVCAngularJSExample</artifactId>
+	<groupId>com.lister.prjmng</groupId>
 	<packaging>war</packaging>
 	<version>1.0.0</version>
-	<name>Spring4MVCAngularJSExample Maven Webapp</name>
+	<name>Project Management Application</name>
 
 	<properties>
 		<springframework.version>4.2.0.RELEASE</springframework.version>
@@ -53,13 +52,14 @@
 					<version>2.4</version>
 					<configuration>
 						<warSourceDirectory>src/main/webapp</warSourceDirectory>
-						<warName>Spring4MVCAngularJSExample</warName>
+						<warName>prj-mng-1.0</warName>
 						<failOnMissingWebXml>false</failOnMissingWebXml>
 					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
 
-		<finalName>Spring4MVCAngularJSExample</finalName>
+		<finalName>prj-mng-1.0</finalName>
 	</build>
+	<artifactId>prj-mng-1.0</artifactId>
 </project>

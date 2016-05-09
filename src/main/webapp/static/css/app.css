@@ -3,6 +3,10 @@ body, #mainWrapper {
 	background-color:rgb(245, 245, 245);
 }
 
+.generic-container ng-scope{
+	margin-left:10%;
+}
+
 body, .form-control{
 	font-size:12px!important;
 }
