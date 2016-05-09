@@ -44,7 +44,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 			},
 		    
 			deleteUser: function(id){
-					return $http.delete('http://localhost:8080/Spring4MVCAngularJSExample/user/'+id)
+					return $http.post('http://localhost:8080/Spring4MVCAngularJSExample/user/'+id)
 							.then(
 									function(response){
 										return response.data;

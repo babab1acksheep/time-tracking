@@ -1,8 +1,8 @@
-package com.websystique.springmvc.service;
+package com.lister.projmng.service;
 
 import java.util.List;
 
-import com.websystique.springmvc.model.User;
+import com.lister.projmng.model.User;
 
 
 

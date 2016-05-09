@@ -1,4 +1,4 @@
-package com.websystique.springmvc.model;
+package com.lister.projmng.model;
 
 public class User {
 

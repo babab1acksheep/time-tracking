@@ -1,4 +1,4 @@
-package com.websystique.springmvc.configuration;
+package com.lister.projmng.configuration;
 
 import java.io.IOException;
 
