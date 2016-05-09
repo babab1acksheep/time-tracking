@@ -13,7 +13,7 @@ App.controller('ResourceController', ['$scope', 'ResourceService','$location', f
                            ];          
               
           self.fetchAllUsers = function(baseUrl){
-              UserService.fetchAllUsers(baseUrl)
+        	  ResourceService.fetchAllUsers(baseUrl)
                   .then(
       					       function(d) {
       						        self.users = d;
@@ -25,7 +25,7 @@ App.controller('ResourceController', ['$scope', 'ResourceService','$location', f
           };
            
           self.createUser = function(user,baseUrl){
-              UserService.createUser(user,baseUrl)
+        	  ResourceService.createUser(user,baseUrl)
 		              .then(
                       self.fetchAllUsers, 
 				              function(errResponse){
@@ -35,7 +35,7 @@ App.controller('ResourceController', ['$scope', 'ResourceService','$location', f
           };
 
          self.updateUser = function(user, id,baseUrl){
-              UserService.updateUser(user, id,baseUrl)
+        	 ResourceService.updateUser(user, id,baseUrl)
 		              .then(
 				              self.fetchAllUsers, 
 				              function(errResponse){
@@ -45,7 +45,7 @@ App.controller('ResourceController', ['$scope', 'ResourceService','$location', f
           };
 
          self.deleteUser = function(id,baseUrl){
-              UserService.deleteUser(id,baseUrl)
+        	 ResourceService.deleteUser(id,baseUrl)
 		              .then(
 				              self.fetchAllUsers, 
 				              function(errResponse){
